@@ -36,6 +36,7 @@
 * PuTTY or Bitvise
 > Host: 10.7.5.38	Port:4422
 > User: bif	Key: bif0003
+
 > Start tutorial '01-Aula_pratica_Linux.pdf'
 
 * MySQL
