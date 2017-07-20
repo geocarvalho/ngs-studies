@@ -111,7 +111,8 @@ sandro@neuro.ufrn.br
 * SAM > BAM
 * Mpileup - [interpretation](http://samtools.sourceforge.net/pileup.shtml)
 * Dedup can be made by **samtools rmdup** or **picard MarkDuplicates**
-QUESTION: How differentiate a variant caused by an error after dedup from a somatic variant?
+
+**QUESTION**: How differentiate a variant caused by an error after dedup from a somatic variant?
 
 ### 2. Varscan (variant call software, normally used for somatic samples)
 
