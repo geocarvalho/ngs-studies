@@ -1,5 +1,5 @@
 # Introduction to second generation NGS data analysis (practice and theory) - [course page](http://bioinfo.imd.ufrn.br/cursosdcd/ngs/)
-Course given by [BIOME](http://bioinfo.imd.ufrn.br) from UFRN in 2017.2
+Course given by [BIOME](http://bioinfo.imd.ufrn.br) from UFRN in 2017.2 (material in Portuguese - BR)
 
 ## Day 1 - Introduction to bioinformatics
 * Basic linux commands
