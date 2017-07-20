@@ -27,30 +27,31 @@
 > Blast tutorial: digitalworldbiology.com/tutorial/blast-for-beginners
 
 * Alignment elements (Alignment score)
->>>
+>
 Gap opening -4 points (deletions)
+
 Gap extension -3 points (insertions)
+
 Mismatch -2 points (SNV)
+
 Match 1 point (normal)
->>>
+>
 
 ### Linux
 * VMware to virtualmachines
 * PuTTY or Bitvise
->>>
+>
 Host: 10.7.5.38	Port:4422
+
 User: bif	Key: bif0003
->>>
+>
 
 > Start tutorial '01-Aula_pratica_Linux.pdf'
 
 * MySQL
 * Perl
 * R - tryr.codeschool.com
-
-
-## ------------------------------------------------------
-
+---
 # OBS.:
 * RNAseq tem distribuição binomial negativa
 * NP completo, é preciso testar todas as alternativas e isso leva tempo
