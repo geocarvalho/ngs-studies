@@ -27,24 +27,22 @@
 > Blast tutorial: digitalworldbiology.com/tutorial/blast-for-beginners
 
 * Alignment elements (Alignment score)
->
-Gap opening -4 points (deletions)
 
-Gap extension -3 points (insertions)
+> Gap opening -4 points (deletions)
 
-Mismatch -2 points (SNV)
+> Gap extension -3 points (insertions)
 
-Match 1 point (normal)
->
+> Mismatch -2 points (SNV)
+
+> Match 1 point (normal)
 
 ### Linux
 * VMware to virtualmachines
 * PuTTY or Bitvise
->
-Host: 10.7.5.38	Port:4422
 
-User: bif	Key: bif0003
->
+> Host: 10.7.5.38	Port:4422
+
+> User: bif	Key: bif0003
 
 > Start tutorial '01-Aula_pratica_Linux.pdf'
 
