@@ -38,9 +38,8 @@ sandro@neuro.ufrn.br
 
 ### Papers with applications
 * ['Actionable diagnosis of neuroleptospirosis by NGS'](http://www.nejm.org/doi/full/10.1056/NEJMoa1401268#t=article) - Metagenomics application in neuro biopsy to search for microorganisms disease causing
-* ['Analysis of protein-coding genetic variation in 60,706 humans']
-* *(http://www.nature.com/nature/journal/v536/n7616/full/nature19057.html?foxtrotcallback=true) - ExAC paper
-* ['Neanderthal behaviour, diet, and disease inferred from ancient DNA in dental calculus'](https://www.nature.com/nature/journal/v544/n7650/full/nature21674.html) - 
+* ['Analysis of protein-coding genetic variation in 60,706 humans'](http://www.nature.com/nature/journal/v536/n7616/full/nature19057.html?foxtrotcallback=true) - ExAC paper
+* ['Neanderthal behaviour, diet, and disease inferred from ancient DNA in dental calculus'](https://www.nature.com/nature/journal/v544/n7650/full/nature21674.html) - Sequencing microorganism from past
 
 ## *Part 2*
 ### ISO
