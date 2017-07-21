@@ -110,7 +110,7 @@ sandro@neuro.ufrn.br
 
 ### Trim_galore (can detect primers used)
 * 'A wrapper around Cutadapt and FastQC to consistently apply adapter and quality trimming to FastQ files, with extra functionality for RRBS data.'
-* ([github](https://github.com/FelixKrueger/TrimGalore))
+* [github](https://github.com/FelixKrueger/TrimGalore)
 
 ### Cutadapt (just remove adpators)
 * 'Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.'
@@ -120,7 +120,7 @@ sandro@neuro.ufrn.br
 ### Starting practice ('02-Aula_pratica_SeqQualityControl.pdf')
 
 ## *Part 3*
-## Variant Calling
+## Alignment and variant Calling
 * Start class '03-AulaVariantes.pdf'
 
 ### 1. Burrows-Wheeler Alignment ([BWA](http://bio-bwa.sourceforge.net/bwa.shtml))
