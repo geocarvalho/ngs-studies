@@ -63,7 +63,7 @@ sandro@neuro.ufrn.br
 * For number in the ASCIII table, ignore the invisible digits (real digits starts in 33), thats why you subtract 33 from the given quality value per character
 * Phred score 10 indicate 1 error in 10 base calls (90%), phred score *25* (99% < x < 99.9%)
 
-#### Map reads
+### Map reads
 * Download Genome
 * Sorting the chromossomes
 * Index the genome
