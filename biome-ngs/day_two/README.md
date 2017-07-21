@@ -138,8 +138,11 @@ and indels. These features make BWA mem suited to mapping of whole genome bisulf
 * Mpileup - [interpretation](http://samtools.sourceforge.net/pileup.shtml)
 * Dedup can be made by **samtools rmdup** or **picard MarkDuplicates**
 > ['Question: Why Do We Need Markduplicates For Variants Detection In Gatk Processing Pipeline?'](https://www.biostars.org/p/18784/)
+
 > ['Removing duplicates is it really necessary?'](http://seqanswers.com/forums/showthread.php?t=6854)
+
 > ['Question: About Paired-End Sequencing'](https://www.biostars.org/p/788/)
+
 > ['Question: Difference Between "Mate Pair" And "Pair-End"'](https://www.biostars.org/p/77293/)
 
 **QUESTION**: How differentiate a variant caused by an error after dedup from a somatic variant?
