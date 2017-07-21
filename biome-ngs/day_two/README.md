@@ -92,7 +92,7 @@ sandro@neuro.ufrn.br
 * [Web site informations](http://ngsutils.org/modules/fastqutils/)
 
 ### FastQC
-> 'Modern high throughput sequencers can generate hundreds of millions of sequences in a single run. Before analysing this sequence to draw biological conclusions you should always perform some simple quality control checks to ensure that the raw data looks good and there are no problems or biases in your data which may affect how you can usefully use it.' ([Web site](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+> 'Modern high throughput sequencers can generate hundreds of millions of sequences in a single run. Before analysing this sequence to draw biological conclusions you should always perform some simple quality control checks to ensure that the raw data looks good and there are no problems or biases in your data which may affect how you can usefully use it.' ([Web site](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/))
 
 * Basic statistics
 * Per base sequence quality (The start and end normally are bad)
