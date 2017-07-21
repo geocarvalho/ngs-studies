@@ -92,12 +92,8 @@ sandro@neuro.ufrn.br
 * [Web site informations](http://ngsutils.org/modules/fastqutils/)
 
 ### FastQC
-<<<<<<< HEAD
 > 'Modern high throughput sequencers can generate hundreds of millions of sequences in a single run. Before analysing this sequence to draw biological conclusions you should always perform some simple quality control checks to ensure that the raw data looks good and there are no problems or biases in your data which may affect how you can usefully use it.' ([Web site](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 
-=======
-* 'Modern high throughput sequencers can generate hundreds of millions of sequences in a single run. Before analysing this sequence to draw biological conclusions you should always perform some simple quality control checks to ensure that the raw data looks good and there are no problems or biases in your data which may affect how you can usefully use it.' ([Web site](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/))
->>>>>>> 8e443f17d4b15528443d851ee847d276846be9ba
 * Basic statistics
 * Per base sequence quality (The start and end normally are bad)
 * Sequence duplication levels (In Amplicon and microRNA is expected more repetitions)
@@ -118,14 +114,9 @@ sandro@neuro.ufrn.br
 * [Web page](http://solexaqa.sourceforge.net/)
 
 ### Trim_galore (can detect primers used)
-<<<<<<< HEAD
 > 'A wrapper around Cutadapt and FastQC to consistently apply adapter and quality trimming to FastQ files, with extra functionality for RRBS data.'
 
 * ([github](https://github.com/FelixKrueger/TrimGalore))
-=======
-* 'A wrapper around Cutadapt and FastQC to consistently apply adapter and quality trimming to FastQ files, with extra functionality for RRBS data.'
-* [github](https://github.com/FelixKrueger/TrimGalore)
->>>>>>> 8e443f17d4b15528443d851ee847d276846be9ba
 
 ### Cutadapt (just remove adpators)
 > 'Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.'
@@ -184,6 +175,7 @@ and indels. These features make BWA mem suited to mapping of whole genome bisulf
 * [Broad explanation](https://gatkforums.broadinstitute.org/gatk/discussion/1268/what-is-a-vcf-and-how-should-i-interpret-it) 
 
 ### 5.  SnpEff (vcf annotation - [site](http://snpeff.sourceforge.net/SnpEff_manual.html))
+**NEED UPDATE**
 
 ### Start tutorial '03-Aula_pratica_variantes.pdf'
 * How many reads sequenced against reference? 341429
