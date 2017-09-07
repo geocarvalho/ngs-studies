@@ -1,7 +1,7 @@
 # NGS material
 Repository with learning materials related to New Generation Sequencing (NGS) analysis and processing
 
-## Phenotype (ontologies)
+## Phenotype (ontologes)
 * [HPO](http://human-phenotype-ontology.github.io/documentation.html)
 * [OMIM](https://www.omim.org/)
 * [Exomiser](https://github.com/exomiser/Exomiser)
