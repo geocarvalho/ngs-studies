@@ -12,7 +12,7 @@ Repository with learning materials related to New Generation Sequencing (NGS) an
 * [Mesh](https://www.ncbi.nlm.nih.gov/mesh)
 
 ## Matchmaking
-* [Mathmaker exchange](http://www.matchmakerexchange.org/)
+* [Matchmaker exchange](http://www.matchmakerexchange.org/)
 > "Facilitate the matching of cases with similar phenotypic and genotypic profiles (matchmaking) through standardized application programming interfaces (APIs) and procedural conventions."
 * [PhenomeCentral](https://phenomecentral.org/)
 > "An integrated portal for sharing phenotype and genotype data for rare genetic disorders"
