@@ -57,8 +57,11 @@
 14. How many genes are in common between condition A and condition B?
 
 `$ cut -f1 apple.conditionA | sort -u > apple.conditionA.genes`
+
 `$ cut -f1 apple.conditionB | sort -u > apple.conditionB.genes`
+
 `$ cut -f1 apple.conditionC | sort -u > apple.conditionC.genes`
+
 `$ comm -1 -2 apple.conditionA.genes apple.conditionB.genes | wc -l`
 
 15. How many genes are specific to condition A?
@@ -72,5 +75,7 @@
 17. How many genes are in common to all three conditions?
 
 `$ comm -1 -2 apple.conditionA.sorted apple.conditionB.sorted > conditionAB`
+
 `$ sort -u apple.conditionC > apple.conditionC.sorted`
+
 `$ comm -1 -2 conditionAB apple.conditionC.sorted | wc -l`
