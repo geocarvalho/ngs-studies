@@ -14,7 +14,7 @@
 ### Genes
 > Genes formation in eukaryotic cells
 
-![genes-expression](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/2-gene-expression.png)
+![genes-expression](https://github.com/geocarvalho/ngs-studies/blob/master/command-line-tools-for-genomic-ds/annotations/2-gene-expression.png?raw=true)
 
 1. Transcription
 
@@ -70,12 +70,12 @@
 * Second line is the sequence;
 * Third line is the strand (+ or -);
 * Fourth line is the sequence quality.
-![fastq](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/2-fastq.png)
+![fastq](https://github.com/geocarvalho/ngs-studies/blob/master/command-line-tools-for-genomic-ds/annotations/2-fastq.png?raw=true)
 * About the base quality scores in FASTQ files:
   * Let Pb = probability that the call at base *b* is correct;
   * Quality value: Qsanger = -10.log10Pb (integer);
   * Sanger (Phred quality scores): 0-93 (ASCII characters 33-126);
-![ascii](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/2-ascii.png)
+![ascii](https://github.com/geocarvalho/ngs-studies/blob/master/command-line-tools-for-genomic-ds/annotations/2-ascii.png?raw=true)
   * The maximal quality value is 40;
   * Quality values below 20-25 are considered low.
 ---
@@ -87,10 +87,10 @@
 * **BED** (Browser extensible data) format
   * The basic format has 3 columns (chr, start and end);
   * The extended format has *chr, start, end, name, score, strand, thick_start, thick_end and rgb* columns;
-![extended-bed](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/2-extended-bed.png)
+![extended-bed](https://github.com/geocarvalho/ngs-studies/blob/master/command-line-tools-for-genomic-ds/annotations/2-extended-bed.png?raw=true)
   * It's 0-based (count spaces) and it means that the first nucleotide is counted as 0, not 1-based (count bases) counting as 1;
   * The extended format can have more columns like *Block count* and *Block sizes*;
-![bed-more-columns](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/2-bed-more-columns.png) 
+![bed-more-columns](https://github.com/geocarvalho/ngs-studies/blob/master/command-line-tools-for-genomic-ds/annotations/2-bed-more-columns.png?raw=true) 
   * The example above is 0-based.
   
 * **GTF** (Genome transfer format) format
@@ -98,11 +98,11 @@
   * Columns 1-9 is tab separated;
   * The fields in column 9 is space separeted;
   * Coordinates are 1-based.
-![gtf](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/2-gtf.png)
+![gtf](https://github.com/geocarvalho/ngs-studies/blob/master/command-line-tools-for-genomic-ds/annotations/2-gtf.png?raw=true)
 
 * **GFF** (Genomic feature format) format
   * One line for each exon.
-![gff3](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/2-gff3.png)
+![gff3](https://github.com/geocarvalho/ngs-studies/blob/master/command-line-tools-for-genomic-ds/annotations/2-gff3.png?raw=true)
 ---
 
 ### Alignment
@@ -120,16 +120,16 @@
 
 > HQ = header, SQ = sequence line, PG = program (command) or how it was made.
 
-![sam](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/2-sam.png)
+![sam](https://github.com/geocarvalho/ngs-studies/blob/master/command-line-tools-for-genomic-ds/annotations/2-sam.png?raw=true)
   * After header we have the alignments reads metrics per read
 
-![sam-metrics](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/2-sam-metrics.png)
+![sam-metrics](https://github.com/geocarvalho/ngs-studies/blob/master/command-line-tools-for-genomic-ds/annotations/2-sam-metrics.png?raw=true)
   * *Mate chr* = Where is the mate of this particular field, "=" if is the same chr, "chr?" another chr if is different or "*" isn't mate;
   * *Edit distance to reference (NM)* = how many of edit operations (substitutions, insertions and deletions) we need to include to equalize to do the mapping between the query and the corresponding reference;
   * *Hit index for this alignment (HI)* = if we have multiple matches and each one has different quality or alignment score, what's the order, the position of this alignment within that particular hierarchy (list)
 
 * SAM **FLAGs**
-![sam-flag](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/2-sam-flag.png)
+![sam-flag](https://github.com/geocarvalho/ngs-studies/blob/master/command-line-tools-for-genomic-ds/annotations/2-sam-flag.png?raw=true)
   * Based on binary notation (0 = false; 1 = true)
   * Read from right to left
   * **0x1** = paired (1) or not (0); **0x2** = proper paired (1) or not (0); **0x4** = unmapped (1) or mapped (0); **0x8** = mate not mapped (1) or mapped (0);
@@ -137,7 +137,7 @@
   * **0x100** = secondary alignment (1) or not (0); **0x200** = not passed quality check (1) or passed (0) (based in quality values low or too many ends); **0x400** = PCR or optical duplicate (1) or not (0); **0x800** = sup. alignment (1) or not (0).
 
 * SAM **CIGAR**
-![sam-cigar](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/2-sam-cigar.png)
+![sam-cigar](https://github.com/geocarvalho/ngs-studies/blob/master/command-line-tools-for-genomic-ds/annotations/2-sam-cigar.png?raw=true)
   * The second example represents a splice alignment.
 ---
 ### Repositories
