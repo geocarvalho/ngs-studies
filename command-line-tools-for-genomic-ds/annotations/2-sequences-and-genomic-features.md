@@ -3,13 +3,13 @@
 ---
 * **Genome**
 
-> * **A totality of genetic material in a cell** (very long sequence). It's organized in 46 chromosomes (22 pairs autossomics and 1 pair sexual);
+ * **A totality of genetic material in a cell** (very long sequence). It's organized in 46 chromosomes (22 pairs autossomics and 1 pair sexual);
 
-> * In the genome we have genes organized as beads along the string in both strands of the **double-helix** genome;
+ * In the genome we have genes organized as beads along the string in both strands of the **double-helix** genome;
 
-> * Genes are made of two types of blocks, **exons** that are informatives and the spaces between exons that are called **introns**.
+ * Genes are made of two types of blocks, **exons** that are informatives and the spaces between exons that are called **introns**.
 
-![Genomes-and-genes](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/2-genomes-and-genes.png)
+![Genomes-and-genes](/home/https://github.com/geocarvalho/ngs-studies/blob/master/command-line-tools-for-genomic-ds/annotations/2-genomes-and-genes.png?raw=truegeorge/Git/ngs-studies/command-line-tools-for-genomic-ds/2-genomes-and-genes.png)
 
 ### Genes
 > Genes formation in eukaryotic cells
