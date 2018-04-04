@@ -51,7 +51,7 @@
 * May or may not require amplification;
 * Sequence fragment ends: 50-450 bp;
 * Single-end or paired-end reads;
-* Low cost (<$0.04/Mb), fast, very high throughput (100s millions/run).
+* Low cost (<%0.04/Mb), fast, very high throughput (100s millions/run).
 
 ### Assembly
 > After the sequencing process, bioinformatics algorithms are responsible to reorganize the reads against a reference genome or take the common bases in the reads and put together based on graph algorithms.
@@ -159,31 +159,31 @@
 * Select "illumina sequencing of floral transcriptomes in woodland strawberry" with around 15 mb to download it fast;
 * Click in the run "SRR1107997" and download the data
 ```
-$ wget ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR110/SRR1107997/SRR1107997.sra
+% wget ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR110/SRR1107997/SRR1107997.sra
 ```
 
 * Transform `.sra` format to `.fastq` format using `fastq-dump`
 ```
-$ wget --output-document sratoolkit.tar.gz http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-ubuntu64.tar.gz
+% wget --output-document sratoolkit.tar.gz http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-ubuntu64.tar.gz
 ```
 
 * During the download install `fastq-dump`([HowTo: Binary Installation · ncbi/sra-tools Wiki · GitHub](https://github.com/ncbi/sra-tools/wiki/HowTo:-Binary-Installation))
 ```
-$ gunzip sratoolkit.tar.gz
-$ tar -vxzf sratoolkit.tar.gz
-$ export PATH=$PATH:$PWD/sratoolkit.2.4.0-1.mac64/bin
-$ which fastq-dump
-$ fastq-dump --help
+% gunzip sratoolkit.tar.gz
+% tar -vxzf sratoolkit.tar.gz
+% export PATH=%PATH:%PWD/sratoolkit.2.4.0-1.mac64/bin
+% which fastq-dump
+% fastq-dump --help
 ```
 
 * Now run `fastq-dump`
 ```
-$ nohup fastq-dump SRR1107997.sra & 
+% nohup fastq-dump SRR1107997.sra & 
 ```
 
 * For pair-end files
 ```
-$ nohup fastq-dump --split-3 fileName.sra &
+% nohup fastq-dump --split-3 fileName.sra &
 ```
 ---
 
@@ -208,47 +208,47 @@ $ nohup fastq-dump --split-3 fileName.sra &
 
 1. flagstat
 ```
-$ samtools flagstat example.bam
+% samtools flagstat example.bam
 ```
 
 ![flagstat](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/annotations/2-samtools-flagstat.png)
 
 2. sort
 ```
-$ samtools sort example.bam example.sorted
+% samtools sort example.bam example.sorted
 ```
 
 3. index
 ```
-$ samtools index example.sorted.bam
+% samtools index example.sorted.bam
 ```
 
 4. merge
 ```
-$ samtools merge example.bam example_1.bam example_2.bam
+% samtools merge example.bam example_1.bam example_2.bam
 ```
 
 5. view
 * To see the alignment
 ```
-$ samtools view example.bam | more
-$ samtools view -h example.bam | more
-$ samtools view -h example.bam > example.sam
-$ samtools view -H example.bam | more
+% samtools view example.bam | more
+% samtools view -h example.bam | more
+% samtools view -h example.bam > example.sam
+% samtools view -H example.bam | more
 ```
 > -h you will see also the header (BAM -> SAM), while -H you see just the header
 
 * To convert from SAM to BAM
 
 ```
-$ samtools view -bT /path/ref.fa example.sam > example.sam.bam
+% samtools view -bT /path/ref.fa example.sam > example.sam.bam
 ```
 
 * To extract a range size of the BAM
 
 ```
-$ samtools view example.bam "chr22:240000000-25000000"
-$ samtools view -L example.bed example.bam
+% samtools view example.bam "chr22:240000000-25000000"
+% samtools view -L example.bed example.bam
 ``` 
 > Use -L to use a bed file (chr22\t24000000\t25000000)
 ---
@@ -258,19 +258,19 @@ $ samtools view -L example.bed example.bam
 * How many exons transcripts in the reference contains Alus?
 
 ```
-$ bedtools intersect -wo -a RefSeq.gtf -b Alus.bed | cut -f9 | cut -d " " -f2 | sort -u | wc -l
+% bedtools intersect -wo -a RefSeq.gtf -b Alus.bed | cut -f9 | cut -d " " -f2 | sort -u | wc -l
 ```
 
 > My GTF wasn't formated well, so it didn't work to me.
 
 ```
-$ bedtools intersect -split -wo -a RefSeq.bed -b Alus.bed | wc -l
+% bedtools intersect -split -wo -a RefSeq.bed -b Alus.bed | wc -l
 ```
 
 > For my data `-wo` didn't work
 
 ```
-$ bedtools intersect -split -wao -a RefSeq.bed -b Alus.bed | wc -l
+% bedtools intersect -split -wao -a RefSeq.bed -b Alus.bed | wc -l
 ```
 
 > It shows all the features in A with overlap or not (it worked in the new version). Follow by a *NULL* entry in the Alu file, represented by `. -1 -1 .`
@@ -280,30 +280,30 @@ $ bedtools intersect -split -wao -a RefSeq.bed -b Alus.bed | wc -l
 * Transform a BAM file to BED file with a CIGAR column
 
 ```
-$ bedtools bamtobed -cigar -i NA12814.bam | more
+% bedtools bamtobed -cigar -i NA12814.bam | more
 ```
 
 * Using `-split` option for a BED12 it will split by exon
 
 ```
-$ bedtools bamtobed -split -i NA12814.bam | more
+% bedtools bamtobed -split -i NA12814.bam | more
 ```
 
 3. bedtobam
 
 ```
-$ bedtools bedtobam -i RefSeq.gtf -g /path/hg38.hdrs > refseq.gtf.bam
+% bedtools bedtobam -i RefSeq.gtf -g /path/hg38.hdrs > refseq.gtf.bam
 ```
 > The `-g` is a header file. The command above separate by exon
 > Use `samtools view` to see the result file
 
 ```
-$ bedtools bedtobam -i RefSeq.bed -g /path/hg38.hdrs > refseq.bed.bam
+% bedtools bedtobam -i RefSeq.bed -g /path/hg38.hdrs > refseq.bed.bam
 ```
 > The command above separate by gene (one line by gene, and the CIGAR don't show the introns)
 
 ```
-$ bedtools bedtobam -bed12 -i RefSeq.gtf -g /path/hg38.hdrs > refseq.gtf.bam
+% bedtools bedtobam -bed12 -i RefSeq.gtf -g /path/hg38.hdrs > refseq.gtf.bam
 ```
 > With `-bed12` parameter it shows a realistic view of the gene (exon/intron)
 
@@ -312,17 +312,17 @@ $ bedtools bedtobam -bed12 -i RefSeq.gtf -g /path/hg38.hdrs > refseq.gtf.bam
 * Alows to get the FASTA sequence for some intervals, usefull for transcriptomic analysis for example.
 
 ```
-$ bedtools getfasta -fi /path/hg38c.fa -bed RefSeq.gtf -fo refseq.gtf.fasta
+% bedtools getfasta -fi /path/hg38c.fa -bed RefSeq.gtf -fo refseq.gtf.fasta
 ```
 > The command above gives one line for exon
 
 ```
-$ bedtools bedtobam -i RefSeq.bed -g /path/hg38.hdrs > refseq.bed.bam
+% bedtools bedtobam -i RefSeq.bed -g /path/hg38.hdrs > refseq.bed.bam
 ```
 > It gives one contig by gene, with exons/introns
 
 ```
-$ bedtools bedtobam -split -i RefSeq.bed -g /path/hg38.hdrs > refseq.bed.bam
+% bedtools bedtobam -split -i RefSeq.bed -g /path/hg38.hdrs > refseq.bed.bam
 ```
 > The `-split` indicate the BED with multiple blocks, each genes has the correct range
 

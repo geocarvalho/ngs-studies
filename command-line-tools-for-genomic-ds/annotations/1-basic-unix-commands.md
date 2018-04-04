@@ -4,10 +4,10 @@
 
 1. /, cd, pwd, ls
 
-`$ date`
-`$ echo hello`
-`$ foo`
-`$ pwd`
+`% date`
+`% echo hello`
+`% foo`
+`% pwd`
 
 > `pwd` - print working directory (absolute path)
 
