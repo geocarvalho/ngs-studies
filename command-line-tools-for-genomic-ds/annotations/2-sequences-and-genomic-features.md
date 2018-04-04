@@ -191,3 +191,139 @@ $ nohup fastq-dump --split-3 fileName.sra &
 
 * [UCSC Table Browser](https://genome.ucsc.edu/cgi-bin/hgTables)
 
+![table-1](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/annotations/2-table-1.png)
+* Save it as "RefSeq.gtf.txt".
+
+![table-2](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/annotations/2-table-2.png)
+* After that select "Whole gene";
+* Save it as "RefSeq.txt".
+
+![table-3](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/annotations/2-table-3.png)
+* In "filter" add to the "repName" = "Alu*";
+* Download the "Whole gene";
+* Save as "Alus.bed.txt".
+---
+
+### SAMtools
+
+1. flagstat
+```
+$ samtools flagstat example.bam
+```
+
+![flagstat](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/annotations/2-samtools-flagstat.png)
+
+2. sort
+```
+$ samtools sort example.bam example.sorted
+```
+
+3. index
+```
+$ samtools index example.sorted.bam
+```
+
+4. merge
+```
+$ samtools merge example.bam example_1.bam example_2.bam
+```
+
+5. view
+* To see the alignment
+```
+$ samtools view example.bam | more
+$ samtools view -h example.bam | more
+$ samtools view -h example.bam > example.sam
+$ samtools view -H example.bam | more
+```
+> -h you will see also the header (BAM -> SAM), while -H you see just the header
+
+* To convert from SAM to BAM
+
+```
+$ samtools view -bT /path/ref.fa example.sam > example.sam.bam
+```
+
+* To extract a range size of the BAM
+
+```
+$ samtools view example.bam "chr22:240000000-25000000"
+$ samtools view -L example.bed example.bam
+``` 
+> Use -L to use a bed file (chr22\t24000000\t25000000)
+---
+
+### BEDtools
+1. intersect
+* How many exons transcripts in the reference contains Alus?
+
+```
+$ bedtools intersect -wo -a RefSeq.gtf -b Alus.bed | cut -f9 | cut -d " " -f2 | sort -u | wc -l
+```
+
+> My GTF wasn't formated well, so it didn't work to me.
+
+```
+$ bedtools intersect -split -wo -a RefSeq.bed -b Alus.bed | wc -l
+```
+
+> For my data `-wo` didn't work
+
+```
+$ bedtools intersect -split -wao -a RefSeq.bed -b Alus.bed | wc -l
+```
+
+> It shows all the features in A with overlap or not (it worked in the new version). Follow by a *NULL* entry in the Alu file, represented by `. -1 -1 .`
+
+2. bamtobed
+
+* Transform a BAM file to BED file with a CIGAR column
+
+```
+$ bedtools bamtobed -cigar -i NA12814.bam | more
+```
+
+* Using `-split` option for a BED12 it will split by exon
+
+```
+$ bedtools bamtobed -split -i NA12814.bam | more
+```
+
+3. bedtobam
+
+```
+$ bedtools bedtobam -i RefSeq.gtf -g /path/hg38.hdrs > refseq.gtf.bam
+```
+> The `-g` is a header file. The command above separate by exon
+> Use `samtools view` to see the result file
+
+```
+$ bedtools bedtobam -i RefSeq.bed -g /path/hg38.hdrs > refseq.bed.bam
+```
+> The command above separate by gene (one line by gene, and the CIGAR don't show the introns)
+
+```
+$ bedtools bedtobam -bed12 -i RefSeq.gtf -g /path/hg38.hdrs > refseq.gtf.bam
+```
+> With `-bed12` parameter it shows a realistic view of the gene (exon/intron)
+
+4. getfasta
+
+* Alows to get the FASTA sequence for some intervals, usefull for transcriptomic analysis for example.
+
+```
+$ bedtools getfasta -fi /path/hg38c.fa -bed RefSeq.gtf -fo refseq.gtf.fasta
+```
+> The command above gives one line for exon
+
+```
+$ bedtools bedtobam -i RefSeq.bed -g /path/hg38.hdrs > refseq.bed.bam
+```
+> It gives one contig by gene, with exons/introns
+
+```
+$ bedtools bedtobam -split -i RefSeq.bed -g /path/hg38.hdrs > refseq.bed.bam
+```
+> The `-split` indicate the BED with multiple blocks, each genes has the correct range
+
+
