@@ -1,4 +1,4 @@
-## Annotations
+# Annotations
 ```
 ├── 1-basic-unix-commands.md
 ├── 2-sequences-and-genomic-features.md
@@ -42,3 +42,6 @@
 ## Help
 
 * Many thanks to [qtao](https://github.com/qtao/Genomic-Data-Science), helped a lot.
+---
+
+Any problem, contact me at george@genomika.com.br
