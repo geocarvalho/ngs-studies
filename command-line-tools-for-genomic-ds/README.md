@@ -42,3 +42,6 @@
 ## Help
 
 * Many thanks to [qtao](https://github.com/qtao/Genomic-Data-Science), helped a lot.
+---
+Any problem, contact me at geocarvalho@outlook.com
+
