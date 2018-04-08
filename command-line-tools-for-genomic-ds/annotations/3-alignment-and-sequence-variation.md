@@ -34,7 +34,7 @@
 
 ### mpileup format (SAMtools)
 > Represent variants
-![mpileup](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/annotations/images/3-mpileup.png)
+![mpileup](https://github.com/geocarvalho/ngs-studies/blob/master/command-line-tools-for-genomic-ds/annotations/images/3-mpileup.png?raw=true)
 * Each line represents one position along the genome with reads aligned;
 * NRDS = Number or reads at the position (depth);
 * BASES = String with info about the bases of each read at that position (like CIGAR string):
@@ -55,16 +55,16 @@
 * It can be compressed into BCF format;
 * Contains a header that starts with "#" and the variants;
 * The header is contains legends about the informations available for each variant.
-![vcf](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/annotations/images/3-vcf.png)
+![vcf](https://github.com/geocarvalho/ngs-studies/blob/master/command-line-tools-for-genomic-ds/annotations/images/3-vcf.png?raw=true)
   * The beging has information about the format version;
   * Has information about the genome reference used (preamble);
   * Has information about the command used;
   * INFO = info about the algorithms used to variant calling;
   * FORMAT = scores reproduced in variant calling.
 * VCF entries call examples
-![vcf-variants](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/annotations/images/3-vcf-variants.png)
+![vcf-variants](https://github.com/geocarvalho/ngs-studies/blob/master/command-line-tools-for-genomic-ds/annotations/images/3-vcf-variants.png?raw=true)
 * Translating the VCF
-![vcf-decoding](/home/george/Git/ngs-studies/command-line-tools-for-genomic-ds/annotations/images/3-vcf-decoding.png)
+![vcf-decoding](https://github.com/geocarvalho/ngs-studies/blob/master/command-line-tools-for-genomic-ds/annotations/images/3-vcf-decoding.png?raw=true)
 
 ### Genomic tools for alignment
 
